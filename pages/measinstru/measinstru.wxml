@@ -1,20 +1,14 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='ad-wrap'>
-    <image src='../../images/ad.png'></image>
-    <text class='title'>感觉统合综合评测</text>
-    <text class='type'>视/听/嗅/味触/前庭/本体</text>
-    <text class='totle'>7大体系</text>
-    <text class='price'>¥{{current_price}}</text>
+  <view class='ad-wrap2 bg-color'>
+    <text class='title title2'>测评须知</text>
+    <text class='title3'>measurement instructions</text>
   </view>
   <view class='info-txt mar-b-50'>
     感觉统合就是人体在环境内有戏利用自身感观，从外界获得不同感觉信息（视、听、嗅、味、触、前庭和本体感觉等）输入大脑，大脑对输入信息进行加工处理并作出适应性反应的能力。感觉统合不足或感觉统合失调会影响大脑各功能区、感觉器官及身体的协调发挥，引发许诶西、生活方面的问题。
   </view>
-  <view class='info-txt mar-b-20'>
+  <view class='info-txt mar-b-50'>
     儿童的感觉统合等生理发展与学习、情绪有密切关系，要提升学习能力，使儿童保持良好的情绪，必先了解儿童的生理发展，本系统针对0-12岁的儿童对感觉统合进行综合评估和测试，给出8大方面的测评结果。
   </view>
-  <view class='yellow-txt mar-b-20'>
-    ¥{{current_price}}<text class='gray-txt'>¥{{original_price}}</text>
-  </view>
-  <button class='btn red-big-btn' bindtap='buynow'>立即购买</button>
+  <button class='btn green-small-btn' bindtap='continue'>继续 ></button>
 </view>

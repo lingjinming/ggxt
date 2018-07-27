@@ -10,6 +10,28 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res.code)
+        // 081kjo8i0NPP8y12bq8i0Iul8i0kjo8j
+        if (res.code) {
+          wx.request({
+            url: 'https://mini.yuehuayueyou.com/Meeting/wx/onlogin', //仅为示例，并非真实的接口地址
+            method: "GET",
+            data: {
+              "code": res.code
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+              if (res.data.openid) {
+                wx.setStorage({
+                  key: "tokenId",
+                  data: res.data.openid,
+                })
+              }
+            }
+          })
+        }
       }
     })
     // 获取用户信息
@@ -34,6 +56,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseUrl: "https://www.easy-mock.com/mock/5b2cb6258d65cf66ca86b00f",
+    getOptions:"/getOptions",
+    getQuestionAndAnswersByOption:"/getQuestionAndAnswersByOption?option=",
+    result:"/result"
   }
 })

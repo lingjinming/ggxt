@@ -1,0 +1,55 @@
+/* pages/result/result.wxss */
+
+.container {
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.flex-wrap {
+  display: flex;
+  color: #575959;
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 692rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.flex-wrap text {
+  flex: 3;
+}
+
+.flex-wrap button {
+  flex: 1;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+  margin-left: 30rpx;
+  color: #575959;
+}
+
+.result-head {
+  padding-left: 40rpx;
+}
+
+.result-head text:first-child {
+  padding-top: 10rpx;
+}
+
+.result-head text {
+  display: block;
+}
+
+.title {
+  text-align: center;
+}
+
+.inner-con {
+  padding-top: 15rpx;
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+  border-top: 1px solid #94e3d9;
+  font-size: 24rpx;
+}

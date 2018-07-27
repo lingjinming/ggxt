@@ -1,0 +1,17 @@
+<!--pages/test/test.wxml-->
+<view class="container bg-color">
+  <progress percent="{{progress}}" color="#00c1b0" stroke-width="3" active-mode="forwards" active/>
+
+  <view class='options-wrap' style="left:{{left_vw}};width:{{width_vw}}">
+
+    <radio-group wx:for="{{optionList}}" wx:for-index="idx" wx:for-item="option" wx:key="*this" class='option-box' bindchange="radioChange" id="{{option.id}}">
+      <view class='option-title'>{{option.title}}</view>
+      <label wx:for="{{option.answerList}}" wx:for-index="idx2" wx:for-item="radio" wx:key="*that" class="normal" >
+        <radio value="{{radio.answer}},{{radio.answer_id}}"></radio>{{radio.answer}}
+      </label>
+      <text class='group'>{{option.cate_name2}}</text>
+      <text class='next-test' style='display:{{isshow}}' bindtap='up'>上一题</text>
+    </radio-group>
+    
+  </view>
+</view>

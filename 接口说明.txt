@@ -1,0 +1,150 @@
+1.请求接口url:http://localhost:8080/yibk-app/evaluation/getOptions
+返回结果
+{
+  "data": {
+    "option": {
+      "content": "本体,触觉,前庭 3大方面评估",    (评测要点简介)
+      "current_price": 8.8,                       (现价)
+      "detail": "参与我们的评测吧",               (评测介绍)
+      "one_cate_id": 1,
+      "optionList": [
+        {
+          "img_url": "images/71f2bacd-4913-4548-9d8a-b8f25911d2e8.png|images/579e2a0a-65f4-4014-9126-39d2715992ff.png",
+          "u_option": "男|女",
+          "title": "性别",
+          "type": 1                          (1:单选,2:多选,3:输入框)
+        },
+        {
+          "img_url": "images/71f2bacd-4913-4548-9d8a-b8f25911d2e8.png|images/579e2a0a-65f4-4014-9126-39d2715992ff.png",
+          "u_option": "1|3",
+          "title": "年龄",
+          "type": 1
+        },
+        {
+          "img_url": "images/e9425d59-f713-4947-b27c-ec7fa460808a.png|images/18d4df48-1536-4a0d-9bca-f51602f03ec9.png|images/1f1ef3c1-3e90-49aa-8b8b-d45b6cb9bc1b.png|images/4ef135ac-4ff9-44ad-94ad-5324479b418f.png",
+          "u_option": "篮球|足球|羽球|其他",
+          "title": "爱好",
+          "type": 2
+        }
+      ],
+      "original_price": 88,                                            (原价)
+      "pageCount": -1,
+      "pageNo": 1,
+      "pageSize": 10,
+      "remark": "我也不知道说什么   哎  随便说说呗",                   (测评须知)
+      "selectNum": 0,
+      "total": 0
+    }
+  },
+  "respMsg": "成功",
+  "respCode": "0000"
+}
+
+
+
+
+tests:[
+      {
+        type:1,
+        testid:1,
+        group:'本体觉部分',
+        ques:'早上赖床，晚上睡不着，上学前常拒绝到学校，放学后又不想回家',
+        anws:[
+          { name: 'never', value: '从来不这样', id: 0,},
+          { name: 'few', value: '很少这样', id: 1,},
+          { name: 'sometime', value: '有时候这样', id: 2},
+          { name: 'always', value: '常常这样', id: 3}
+        ],
+        isshow: 'none'
+      },
+      {
+        type: 1,
+        testid: 2,
+        group: '本体觉部分2',
+        ques: '早上赖床2，晚上睡不着，上学前常拒绝到学校，放学后又不想回家',
+        anws: [
+          { name: 'never', value: '从来不这样'},
+          { name: 'few', value: '很少这样' },
+          { name: 'sometime', value: '有时候这样' },
+          { name: 'always', value: '常常这样' }
+        ],
+        isshow: 'block'
+      },
+      {
+        type: 1,
+        testid: 3,
+        group: '本体觉部分3',
+        ques: '早上赖床3，晚上睡不着，上学前常拒绝到学校，放学后又不想回家',
+        anws: [
+          { name: 'never', value: '从来不这样' },
+          { name: 'few', value: '很少这样' },
+          { name: 'sometime', value: '有时候这样' },
+          { name: 'always', value: '常常这样' }
+        ]
+      }
+    ],
+
+2.请求接口url:http://localhost:8080/yibk-app/evaluation/getQuestionAndAnswersByOption?option=男|1|篮球&one_cate_id=1
+返回结果：
+{
+  "data": {
+    "questionList": [                     (题目数组)
+      {
+        "answerList": [                   (答案数组)
+          {
+	    "answer_id": 8,               (答案对应的ID)
+            "isRight": 1,
+            "score_num": 1,               (分数)
+            "answer": "问题1的答案A",     (答案)
+            "question_id": 5
+          },
+          {
+	    "answer_id": 9,
+            "isRight": 1,
+            "score_num": 3,
+            "answer": "问题1的答案B",
+            "question_id": 5
+          }
+        ],
+        "id": 5,                        (题目对应的ID)
+        "one_cate_id": 1,
+        "pageCount": -1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "selectNum": 0,
+        "title": "问题1",                (题目标题)
+        "total": 0,
+        "u_option": "男|1|篮球"
+      },
+      {
+        "answerList": [
+          {
+	    "answer_id": 12,
+            "isRight": 1,
+            "score_num": 1,
+            "answer": "问题2的答案A",
+            "question_id": 7
+          },
+          {
+	    "answer_id": 13,
+            "isRight": 1,
+            "score_num": 1,
+            "answer": "问题2的答案B",
+            "question_id": 7
+          }
+        ],
+        "id": 7,
+        "one_cate_id": 1,
+        "pageCount": -1,
+        "pageNo": 1,
+        "pageSize": 10,
+        "selectNum": 0,
+        "title": "问题2",
+        "total": 0,
+        "u_option": "男|1|篮球"
+      }
+    ]
+  },
+  "respMsg": "成功",
+  "respCode": "0000"
+}

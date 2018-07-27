@@ -1,0 +1,20 @@
+<!--pages/choose/choose.wxml-->
+<view class='container bg-color'>
+<scroll-view scroll-y="true">
+  <radio-group class="radio-group mar-b-100" bindchange="radioChange" wx:for="{{optionList}}" wx:for-index="idx" wx:for-item="content" wx:key='idx1'>
+    <text class='option-title'>请选择{{content.title}}:</text>
+    <view class='label-wrap'>
+    <block wx:for="{{content.newImg_url}}" wx:for-index="idx" wx:for-item="imgandoption"  wx:key='idx2'>
+      <label class="radio">
+        <image src='{{imgandoption}}' class='width70'></image>
+        <radio value="{{content.newU_option[idx]}}" checked="{{item.checked}}" />{{content.newU_option[idx]}}
+      </label>
+    </block>
+    </view>
+  </radio-group>
+  </scroll-view>
+  <view class='beginText'>
+    <text>本测试仅需1分钟</text>
+    <button class='btn red-big-btn' bindtap='beginTest'>选好了，开始测评</button>
+  </view>
+</view>

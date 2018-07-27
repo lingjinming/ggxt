@@ -1,0 +1,11 @@
+<!--pages/complete/complete.wxml-->
+<view class='container bg-color'> 
+    <view>
+      <text class='complete-txt'>完成评测，正在生成报告</text>
+    </view>
+    <view>
+      <image src='../../images/shalou.png' class='shalou'></image>
+      <text>即将呈现</text>
+      <text>您的专属评估报告</text>
+    </view>
+</view>

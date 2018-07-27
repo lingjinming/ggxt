@@ -1,0 +1,89 @@
+/* pages/choose/choose.wxss */
+
+.container {
+  padding-top: 158rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.option-title {
+  display: block;
+  color: #fff;
+  font-size: 32rpx;
+  padding-left: 146rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin-bottom: 50rpx;
+}
+
+image {
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.label-wrap {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.label-wrap .radio {
+  margin: 0 30rpx;
+  text-align: center;
+  position: relative;
+}
+
+.label-wrap image {
+  margin: 10rpx auto;
+}
+
+.beginText {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 155rpx;
+  bottom: 125rpx;
+}
+
+.beginText text {
+  color: #fff;
+  font-size: 22rpx;
+}
+
+.red-big-btn {
+  bottom: 0;
+}
+
+.width100 {
+  margin-top: 54rpx;
+}
+
+/* radio未选中时样式 */
+
+radio .wx-radio-input {
+  height: 26rpx;
+  width: 26rpx;
+  border-radius: 50%;
+  margin-top: -4rpx;
+  border: 4rpx solid #aaa;
+  box-sizing: content-box;
+}
+
+/* radio选中时样式 */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  content: '';
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  margin-top: -4rpx;
+  box-sizing: content-box;
+  border: 6rpx solid #0075a9;
+  background: #fff;
+}
+
+scroll-view {
+  height: 64vh;
+}

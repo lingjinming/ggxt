@@ -1,12 +1,19 @@
 {
-  "pages":[
+  "pages": [
+        "pages/result/result",
+        
     "pages/index/index",
+    "pages/choose/choose",
+    "pages/trainPlan/trainPlan",
+    "pages/test/test",
+    "pages/complete/complete",
+    "pages/measinstru/measinstru",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5bccd6",
+    "navigationBarTitleText": "感统评测",
+    "navigationBarTextStyle": "white"
   }
 }

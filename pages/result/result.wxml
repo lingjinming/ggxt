@@ -1,0 +1,35 @@
+<!--pages/result/result.wxml-->
+<view class='container border-top'>
+  <view class='result-head'>
+    <text class='fs40'>{{result.content1}}</text>
+    <text class='fs26'>2018-06-04 14:44</text>
+  </view>
+  <scroll-view enable-back-to-top="true" scroll-y="true">
+    <view class='content'>
+    {{result.introduce}}
+    </view>
+    <view class='content'>
+      <view class='title fs40'>{{result.overallResul.title}}</view>
+      <view class='textalign-c'>{{result.overallResul.score}}分 水平:{{result.overallResul.level}}</view>
+      <view class='inner-con'>{{result.overallResul.con}}</view>
+    </view>
+
+    <view class='content'>
+      <view class='title fs40'>{{result.rainingPlan.title}}</view>
+      <view class='textalign-c'>{{result.rainingPlan.degree}}</view>
+      <view class='inner-con'>{{result.content3.detail}}</view>
+      <view class='textalign-c'><button class='green-btn' bindtap='trainPlan'>生成训练计划</button></view>
+    </view>
+
+    <view class='content'>
+      <view class='title fs40'>{{result.analyze.title}}</view>
+      <view class='fs30'>{{result.analyze.degree}} :</view>
+      <view class='inner-con'>{{result.analyze.con}}</view>
+    </view>
+  </scroll-view>
+  <view class='flex-wrap'>
+  <text>本测评是否有帮助 :</text>
+  <button type="default">有用</button>
+  <button type="default">没用</button>
+  </view>
+</view>
