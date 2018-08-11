@@ -13,9 +13,12 @@
 }
 
 .inner-table-head {
-  height: 88rpx;
+  height: auto;
   background: #29c6b2;
   padding-left: 40rpx;
+  padding-top:15rpx;
+padding-bottom:15rpx;
+
 }
 
 .inner-table-head > text, .inner-table-head view {
@@ -36,8 +39,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #94e3d9;
-  height: 70rpx;
-  line-height: 70rpx;
+  line-height: 2;
   margin-bottom: 20rpx;
 }
 
@@ -51,11 +53,6 @@ picker {
   box-sizing: border-box;
   padding: 40rpx;
   margin-bottom: 40rpx;
-}
-
-.inner-table-head {
-  height: 90rpx;
-  background: #29c6b2;
 }
 
 .inner-table {
@@ -74,22 +71,36 @@ picker {
   border: 1px solid #ccc;
   border-top: none;
 }
-
+.inner-table-body text:nth-child(1) {
+  flex: 1;
+}
 .inner-table-body text:nth-child(2){
   border-left: none;
   border-right: none;
 }
 
-.inner-table-body text:nth-child(3) {
+/* .inner-table-body text:nth-child(3) {
     border-right: none;
-}
+} */
 .textalign-c text {
-  color: #595757;
-  font-size: 30rpx;
-  margin-bottom: 36rpx;
-  display: block;
+color:#595757;
+font-size:30rpx;
+margin-bottom:10rpx;
+display:block;
+margin-top:10rpx;
+
 }
 
 scroll-view {
-  height: 70vh;
+  height: 920rpx;
+}
+
+.result-head{
+  height: auto;
+}
+.inner-table-body text{
+display:flex;
+align-items:center;
+justify-content:center;
+
 }

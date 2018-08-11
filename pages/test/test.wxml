@@ -2,11 +2,12 @@
 <view class="container bg-color">
   <progress percent="{{progress}}" color="#00c1b0" stroke-width="3" active-mode="forwards" active/>
 
-  <view class='options-wrap' style="left:{{left_vw}};width:{{width_vw}}">
+  <view class='options-wrap' bindtap='' style="left:{{left_vw}};width:{{width_vw}}">
 
-    <radio-group wx:for="{{optionList}}" wx:for-index="idx" wx:for-item="option" wx:key="*this" class='option-box' bindchange="radioChange" id="{{option.id}}">
+    <radio-group wx:for="{{optionList}}" wx:for-index="idx" wx:for-item="option" wx:key="idx" class='option-box' bindchange="radioChange" data-two_cate_id='{{option.two_cate_id}}'  id="{{option.id}}">
       <view class='option-title'>{{option.title}}</view>
-      <label wx:for="{{option.answerList}}" wx:for-index="idx2" wx:for-item="radio" wx:key="*that" class="normal" >
+      <label wx:for="{{option.answerList}}" wx:for-index="idx2" wx:for-item="radio" wx:key="idx2" class="normal" bindtap='gonext'>
+      <!-- bindtap='gonext' -->
         <radio value="{{radio.answer}},{{radio.answer_id}}"></radio>{{radio.answer}}
       </label>
       <text class='group'>{{option.cate_name2}}</text>

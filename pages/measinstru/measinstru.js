@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    remark:''
   },
   continue:function(){
     wx.navigateTo({
@@ -17,7 +17,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.getStorage({
+      key: 'remark',
+      success: function(res) {
+        console.log(res)
+         var remark = res.data;
+        // function removeTAG(str, len) {
+        //   return str.replace(/<[^>]+>/g, "");
+        // }
+        // var newremark = removeTAG(remark)
+        that.setData({
+          remark: remark
+        })
+      }
+    })
   },
 
   /**

@@ -19,9 +19,11 @@
   line-height: 52rpx; 
 }
 .type{
-  top: 130rpx !important;
-  font-size: 26rpx;
-  letter-spacing: 2rpx;
+top:150rpx !important;
+font-size:26rpx;
+letter-spacing:2rpx;
+width:360rpx;
+
 }
 .totle{
   top: 168rpx !important;
@@ -30,4 +32,23 @@
 .price{
   top: 242rpx !important;
   color: #ffbd31;
+}
+.absolute{
+position:absolute;
+width:100vw;
+bottom:0;
+height:180rpx;
+}
+.container{
+  overflow: hidden;
+}
+.info-txt {
+font-size:28rpx;
+padding-left:64rpx;
+padding-right:60rpx;
+width:100vw;
+box-sizing:border-box;
+line-height:52rpx;
+height:670rpx;
+text-indent:46rpx;
 }

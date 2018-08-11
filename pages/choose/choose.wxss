@@ -24,7 +24,7 @@ image {
 .label-wrap {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 650rpx;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -78,7 +78,7 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   height: 40rpx;
   width: 40rpx;
   border-radius: 50%;
-  margin-top: -4rpx;
+  margin-top: 0rpx;
   box-sizing: content-box;
   border: 6rpx solid #0075a9;
   background: #fff;

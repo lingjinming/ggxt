@@ -1,3 +1,6 @@
+const app = getApp();
+var util = require('../../utils/util.js');
+
 // pages/trainPlan/trainPlan.js
 Page({
 
@@ -5,24 +8,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user:{
-      name:"阿巴斯",
-      age:9,
-      sex:"男"
-    },
-    plan:{
-      title:"总体任务",
-      duration:45,
-      times:3,
-      totleTimes:30,
-      con: "主要进行XX方面、XX方面、XX方面的强化训练，XXXXXXXXXX"
-    },
-    array:['1','2','3','4','5'],
-    array2: ['1', '2', '3', '4', '5','33'],
+    // user:{
+    //   name:"阿巴斯",
+    //   age:9,
+    //   sex:"男"
+    // },
+    time: '',
+    title:"总体任务",
+    duration:0,
+    times:0,
+    totleTimes:0,
+    con:"主要进行XX方面、XX方面、XX方面的强化训练，XXXXXXXXXX",
     trainingCon:{
-      week:'一',
-      times:1,
-      totleTimes:40,
       duration:45,
       aim:"训练前庭、本体",
       project:[{
@@ -49,27 +46,58 @@ Page({
     }
   },
   backToResul:function(){
-    wx.redirectTo({
-      url: '../result/result',
+    wx.showToast({
+      icon: "loading",
+      title: '结果加载中',
+      duration: 5000,
+      mask: true,
+      success:function(){
+        setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+        },1000)
+      }
     })
-  },
-  bindPickerChange: function (e,index) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  bindPickerChange2: function (e, index) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index2: e.detail.value
-    })
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    var openId = wx.getStorageSync('openId');
+    var one_cate_id = wx.getStorageSync('one_cate_id');
+    var url = app.globalData.baseUrl + app.globalData.getPlayForEvaluction + "?one_cate_id=" + one_cate_id + "&openId=" + openId;
+
+    var time = util.formatTime(new Date());
+
+    wx.request({
+      url: url,
+      method:"GET",
+      // method: "POST",
+      // data: {
+      //   "openId": openId,
+      //   "one_cate_id": one_cate_id
+      // },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        var plan = res.data.data;
+        var trainingCon = plan.project;
+        console.log(plan,trainingCon)
+        that.setData({
+          time: time,
+          title: plan.title,
+          duration: plan.duration,
+          times: plan.times,
+          totleTimes: plan.totleTimes,
+          con: plan.con,
+          trainingCon: trainingCon
+        })
+      }
+    })
   },
 
   /**

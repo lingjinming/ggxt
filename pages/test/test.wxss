@@ -5,7 +5,7 @@
   position: relative;
   left: 0vw;
   width: 100vw;
-  transition: left 0.3s;
+  /* transition: left 0.3s linear; */
 }
 
 .option-box {
@@ -13,7 +13,7 @@
   color: #fff;
   flex: 100%;
   width: 100vw;
-  height: 100vh;
+  height: 99vh;
 }
 
 .option-title {
@@ -34,32 +34,36 @@
   margin: 40rpx auto;
   font-size: 30rpx;
 }
-.is_checked {
-    display: block;
-  width: 614rpx;
-  height: 85rpx;
-  line-height: 85rpx;
-  border-radius: 85rpx;
-  margin: 40rpx auto;
-  font-size: 30rpx;
-  border: 1px solid #00c1b0;
-}
 label radio {
-  opacity: 0;
-}
+opacity:1;
+margin-left:24rpx;
+margin-right:10rpx;
+position:relative;
+top:-2rpx;
 
+}
+/* radio .wx-radio-input.wx-radio-input-checked::before {
+ content: '';
+  border-radius: 50%;
+  margin-top: 0rpx;
+  box-sizing: content-box;
+  border: 6rpx solid #0075a9;
+  background: #fff;
+} */ 
 .group {
-  position: absolute;
-  left: 0;
-  bottom: 25vh;
-  width: 242rpx;
-  height: 70rpx;
-  line-height: 70rpx;
-  text-indent: 40rpx;
-  font-size: 35rpx;
-  border-top-right-radius: 70rpx;
-  border-bottom-right-radius: 70rpx;
-  background-color: #00c1b0;
+left:0;
+bottom:25vh;
+height:70rpx;
+line-height:70rpx;
+text-indent:40rpx;
+font-size:35rpx;
+border-top-right-radius:70rpx;
+border-bottom-right-radius:70rpx;
+background-color:#00c1b0;
+display:inline-block;
+text-align:left;
+padding-right:40rpx;
+
 }
 
 .next-test {
@@ -72,5 +76,5 @@ label radio {
 }
 
 label .on{
-  border: 1px solid #00c1b0
+  border: 2px solid #00c1b0
 }

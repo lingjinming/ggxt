@@ -1,13 +1,14 @@
 {
   "pages": [
-        "pages/result/result",
-        
+                                    
     "pages/index/index",
     "pages/choose/choose",
-    "pages/trainPlan/trainPlan",
     "pages/test/test",
     "pages/complete/complete",
     "pages/measinstru/measinstru",
+            "pages/result/result",
+   "pages/trainPlan/trainPlan",
+                                                            
     "pages/logs/logs"
   ],
   "window": {

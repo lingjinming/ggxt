@@ -2,48 +2,47 @@
 <view class='container border-top'>
   <view class='result-head'>
     <text class='fs40'>我的感统训练计划</text>
-    <view class='infowrap'>
-      <text>姓名 : {{user.name}}</text>
-      <text>年龄 : {{user.age}}岁</text>
-      <text>性别 : {{user.sex}}</text>
-    </view>
+     <!-- <view class='infowrap'> 
+        <text>姓名 : {{user.name}}</text>
+        <text>年龄 : {{user.age}}岁</text>
+        <text>性别 : {{user.sex}}</text>
+      </view>  -->
   </view>
   <scroll-view enable-back-to-top="true" scroll-y="true">
     <view class='content'>
-      <view class='plantitle fs40'>{{plan.title}}</view>
+      <view class='plantitle fs40'>{{title}}</view>
       <view class='flex-wrap fs26'>
-        <text>上课时长:{{plan.duration}}分钟</text>
-        <text>频次:{{plan.times}}次/周</text>
-        <text>总课时:{{plan.totleTimes}}次</text>
+        <text>上课时长:{{duration}}</text>
+        <text>频次:{{times}}</text>
+        <text>总课时:{{totleTimes}}</text>
       </view>
-      <view class='inner-con'>{{plan.con}}</view>
+      <view class='inner-con'>{{con}}</view>
     </view>
     <view class='table-wrap'>
       <view class='inner-table'>
         <view class='inner-table-head'>
           <text>课程安排</text>
-          <text class='float-r'>{{trainingCon.duration}}分钟</text>
           <view>
-            <text>目的 : {{trainingCon.aim}}</text>
+            目的 : {{con}}
           </view>
         </view>
         <view class='inner-table-body flex-wrap'>
           <text>内容</text>
-          <text>次数/组</text>
-          <text>组数</text>
-          <text>最长时间(分钟)</text>
+          <text>次数</text>
+          <!-- <text>组数</text> -->
+          <text>时间(分钟)</text>
         </view>
-        <view wx:for="{{trainingCon.project}}" wx:for-index="idx" wx:for-item="project" wx:key="*this" class='inner-table-body flex-wrap'>
+        <view wx:for="{{trainingCon}}" wx:for-index="idx" wx:for-item="project" wx:key="idx" class='inner-table-body flex-wrap'>
           <text>{{project.projectName}}</text>
           <text>{{project.projectTimes}}</text>
-          <text>{{project.projectGroup}}</text>
+          <!-- <text>{{project.projectGroup}}</text> -->
           <text>{{project.projectMaxTime}}</text>
         </view>
       </view>
     </view>
   </scroll-view>
   <view class='textalign-c'>
-  <text>计划制定时间 : 2018.05.18 14:33</text>
+  <text>计划制定时间 : {{time}}</text>
     <button class='green-btn2' bindtap='backToResul'>返回测评结果</button>
   </view>
 </view>

@@ -12,9 +12,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.1.1",
-	"appid": "wxb86e11fa0d5e3061",
+	"appid": "wxd48d83d618bda279",
 	"projectname": "%E6%84%9F%E7%BB%9F%E7%B3%BB%E7%BB%9F",
 	"isGameTourist": false,
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,

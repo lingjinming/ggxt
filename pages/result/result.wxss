@@ -53,3 +53,17 @@
   border-top: 1px solid #94e3d9;
   font-size: 24rpx;
 }
+
+.border-bottom > view{
+  border-bottom: 1px solid #94e3d9;
+}
+.border-bottom .textalign-c {
+  height: 66rpx;
+  line-height: 66rpx;
+}
+.green-btn{
+  background: rgb(30,153,140)
+}
+scroll-view{
+  height: 1020rpx;
+}
