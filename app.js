@@ -62,9 +62,10 @@ App({
   globalData: {
     userInfo: null,
     // baseUrl: "https://www.easy-mock.com/mock/5b2cb6258d65cf66ca86b00f",
-    // baseUrl:"http://z2110457p6.iask.in:25300/yibk-app/evaluation/",
-    // baseUrl:"http://z2110457p6.iask.in:25300/yibk-app/evaluation/",
-    baseUrl: "https://www.ybc365.com/yibk-app/",
+    // baseUrl:"http://z2110457p6.iask.in:25300/yibk-app/",
+    baseUrl: "https://wx.ybc365.com/yibk-app/",
+
+    // baseUrl: "https://www.ybc365.com/yibk-app/",
     getOptions:"evaluation/getOptions",
     getQuestionAndAnswersByOption:"evaluation/getQuestionAndAnswersByOption?option=",
     getUserQuestionAndAnswers:"evaluation/getUserQuestionAndAnswers",

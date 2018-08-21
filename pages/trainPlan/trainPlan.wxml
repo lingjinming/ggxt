@@ -32,13 +32,20 @@
           <!-- <text>组数</text> -->
           <text>时间(分钟)</text>
         </view>
-        <view wx:for="{{trainingCon}}" wx:for-index="idx" wx:for-item="project" wx:key="idx" class='inner-table-body flex-wrap'>
+        
+        <view wx:for="{{trainingCon}}" wx:for-index="idx" wx:for-item="project" wx:key="idx" class='inner-table-body flex-wrap' bindtap='showVideo' data-projectVideoUrl="{{project.video_url}}" data-projectName="{{project.projectName}}" data-projectTimes="{{project.projectTimes}}" data-projectMaxTime="{{project.projectMaxTime}}" data-con="{{con}}">
           <text>{{project.projectName}}</text>
           <text>{{project.projectTimes}}</text>
           <!-- <text>{{project.projectGroup}}</text> -->
           <text>{{project.projectMaxTime}}</text>
         </view>
       </view>
+    </view>
+    <view class='content'>
+      <view class='flex-wrap fs26'>
+        <text>训练课程安排注解</text>
+      </view>
+      <view class='inner-con'>{{con}}</view>
     </view>
   </scroll-view>
   <view class='textalign-c'>

@@ -99,7 +99,28 @@ Page({
       }
     })
   },
+  showVideo:function(e){
+    var that = this;
+    var currentTargetInfo = e.currentTarget.dataset;
+    console.log(currentTargetInfo)
+    if (currentTargetInfo.projectvideourl){
+      wx.setStorage({
+        key: 'currentTargetInfo',
+        data: currentTargetInfo,
+        success: function () {
+          wx.navigateTo({
+            url: '../trainvideo/trainvideo',
+          })
+        }
+      })
+    }else{
+      wx.showToast({
+        icon:'none',
+        title: '此项目暂无教学视频',
+      })
+    }
 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

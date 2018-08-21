@@ -1,20 +1,22 @@
 {
   "pages": [
-                                    
-    "pages/index/index",
+      
+                  "pages/index/index",
+                  "pages/result/result",
+                          "pages/trainvideo/trainvideo",
+        
     "pages/choose/choose",
     "pages/test/test",
     "pages/complete/complete",
     "pages/measinstru/measinstru",
-            "pages/result/result",
-   "pages/trainPlan/trainPlan",
-                                                            
+                          "pages/trainPlan/trainPlan",
+                          
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5bccd6",
-    "navigationBarTitleText": "感统评测",
+    "navigationBarTitleText": "儿童感统评估训练及计划",
     "navigationBarTextStyle": "white"
   }
 }

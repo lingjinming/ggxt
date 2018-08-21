@@ -1,0 +1,30 @@
+<!--pages/result/result.wxml-->
+<view class='container border-top'>
+  <view class='result-head'>
+    <text class='fs40'>{{currentTargetInfo.projectname}}</text>
+  </view>
+  <scroll-view enable-back-to-top="true" scroll-y="true">
+    <view class='table-wrap'>
+      <view class='inner-table'>
+        <view class='inner-table-head'>
+          <text>课程安排</text>
+          <view>
+            目的 : {{currentTargetInfo.con}}
+          </view>
+        </view>
+        <view class='inner-table-body flex-wrap'>
+          <text>内容</text>
+          <text>次数</text>
+          <!-- <text>组数</text> -->
+          <text>时间(分钟)</text>
+        </view>
+        <view class='currentTargetInfoBox'>
+          <text>{{currentTargetInfo.projectname}}</text>
+          <text>{{currentTargetInfo.projecttimes}}</text>
+          <text>{{currentTargetInfo.projectmaxtime}}</text>
+        </view>
+      </view>
+     <video id="myVideo" src="{{currentTargetInfo.projectvideourl}}" controls></video>
+    </view>
+  </scroll-view>
+</view>

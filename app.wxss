@@ -185,3 +185,6 @@ picker {
 .textalign-c{
   text-align: center;
 }
+button{
+  border: 0;
+}

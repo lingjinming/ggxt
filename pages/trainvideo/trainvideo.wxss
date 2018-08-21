@@ -1,0 +1,34 @@
+/* pages/trainvideo/trainvideo.wxss */
+@import '../trainPlan/trainPlan.wxss';
+video{
+  width:100%;
+  height: 210px;
+  display: block;
+  margin-top: 40rpx;
+}
+.currentTargetInfoBox{
+  display: flex;
+  justify-content: space-around;
+}
+.currentTargetInfoBox text{
+height:50rpx;
+line-height:50rpx;
+border:1px solid #ccc;
+display:flex;
+align-items:center;
+justify-content:center;
+flex:1;
+border-top:0;
+}
+.currentTargetInfoBox text:nth-child(2){
+  border-left: 0;
+  border-right: 0;
+}
+.fs40{
+  display: inline-block;
+}
+.result-head{
+  text-align: center;
+  height: 160rpx !important;
+  line-height: 160rpx;
+}

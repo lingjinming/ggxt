@@ -53,6 +53,7 @@ picker {
   box-sizing: border-box;
   padding: 40rpx;
   margin-bottom: 40rpx;
+  padding-bottom: 0;
 }
 
 .inner-table {
@@ -103,4 +104,18 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+}
+.inner-table-body:nth-child(3) text:nth-child(3),
+.inner-table-body:nth-child(4) text:nth-child(3),
+.inner-table-body:nth-child(5) text:nth-child(3),
+.inner-table-body:nth-child(6) text:nth-child(3){
+  color: transparent;
+  border-top: none;
+  border-bottom: none;
+}
+.inner-table-body:nth-child(4) text:nth-child(3){
+  color: inherit;
+}
+.inner-table-body:nth-child(6) text:nth-child(3){
+  border-bottom: 1px solid #ccc;
 }

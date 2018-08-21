@@ -1,16 +1,16 @@
 var app = getApp();
 // pages/choose/choose.js
 Page({
-  onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log(res.target)
-    }
-    return {
-      title: '自定义转发标题',
-      path: '/page/user?id=123'
-    }
-  },
+  // onShareAppMessage: function (res) {
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //     console.log(res.target)
+  //   }
+  //   return {
+  //     title: '自定义转发标题',
+  //     path: '/page/user?id=123'
+  //   }
+  // },
   /**
    * 页面的初始数据
    */
@@ -91,7 +91,7 @@ Page({
   },
   beginTest: function () { //跳转到测试前提选项页面
     var that = this;
-    var url = app.globalData.baseUrl + app.globalData.getQuestionAndAnswersByOption +   that.data.optionStr + "&one_cate_id=" + that.data.one_cate_id;
+    var url = app.globalData.baseUrl + app.globalData.getQuestionAndAnswersByOption + encodeURIComponent(that.data.optionStr) + "&one_cate_id=" + encodeURIComponent(that.data.one_cate_id);
 
     var option = that.data.option;
     var len = that.data.val_len;
