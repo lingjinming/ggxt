@@ -1,0 +1,43 @@
+<!--pages/result/result.wxml-->
+<view class='container border-top'>
+  <view class='result-head'>
+    <text class='fs40'>我的感统测评报告</text>
+    <text class='fs26'>{{time}}</text>
+  </view>
+  <scroll-view enable-back-to-top="true" scroll-y="true">
+    <!-- <view class='content'>
+    {{con1}}
+    </view> -->
+    <view class='content border-bottom'>
+    <view class='title fs40'>总体结果</view>
+      <block wx:for="{{con2}}" wx:for-item="content2" wx:key="this">
+        <view class='textalign-c'>{{content2.name1}} {{content2.name2}} 水平 : {{content2.name3}}</view>
+      </block>
+    </view>
+
+    <view class='content' style='display:{{show}}'>
+      <view class='title fs40'>一键生成训练计划</view>
+      <view class='textalign-c'>{{con3.degree}}</view>
+      <view class='inner-con'>{{con3.detail}}</view>
+      <view class='textalign-c'><button  class='green-btn' bindtap='trainPlan'>生成训练计划</button></view>
+    </view>
+
+    <view class='content'>
+      <view class='title fs40'>维度详细分析</view>
+      <block wx:for="{{con4}}" wx:for-item="content4" wx:key="this4">
+        <view class='fs30'>{{content4.name1}} </view>
+        <view class='inner-con'>
+        <rich-text nodes="{{content4.name2}}"></rich-text>
+        <!-- {{content4.name2}} -->
+          <!-- <textarea maxlength='-1' disabled value='{{content4.name2}}'></textarea> -->
+        </view>
+      </block>
+      
+    </view>
+  </scroll-view>
+  <!-- <view class='flex-wrap'>
+  <text>本测评是否有帮助 :</text>
+  <button type="default">有用</button>
+  <button type="default">没用</button>
+  </view> -->
+</view>

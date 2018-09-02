@@ -1,0 +1,54 @@
+.ad-wrap image{
+  width: 690rpx;
+  height: 280rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+}
+.ad-wrap text{
+  position: absolute;
+  z-index: 2;
+  left: 60rpx;
+  top: 60rpx;
+}
+.title{
+  font-size: 41rpx;
+  color: #4a936c;
+  border-bottom: 1px solid #4a936c;
+  display: inline-block;
+  height: 52rpx;
+  line-height: 52rpx; 
+}
+.type{
+top:150rpx !important;
+font-size:26rpx;
+letter-spacing:2rpx;
+width:360rpx;
+
+}
+.totle{
+  top: 168rpx !important;
+  font-size: 34rpx;
+}
+.price{
+  top: 242rpx !important;
+  color: #ffbd31;
+}
+.absolute{
+position:absolute;
+width:100vw;
+bottom:0;
+height:180rpx;
+}
+.container{
+  overflow: hidden;
+}
+.info-txt {
+font-size:28rpx;
+padding-left:64rpx;
+padding-right:60rpx;
+width:100vw;
+box-sizing:border-box;
+line-height:52rpx;
+height:670rpx;
+text-indent:46rpx;
+}

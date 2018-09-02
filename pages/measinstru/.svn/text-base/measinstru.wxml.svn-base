@@ -1,0 +1,13 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class='ad-wrap2 bg-color'>
+    <text class='title title2'>测评须知</text>
+    <text class='title3'>measurement instructions</text>
+  </view>
+    <!-- <textarea style="height:720rpx" class='info-txt' value="{{remark}}" disabled maxlength='-1'>
+  </textarea>  -->
+  <view class='info-txt'> <rich-text nodes="{{remark}}"></rich-text></view>
+ 
+  <button class='btn green-small-btn' bindtap='continue'>继续 ></button>
+</view>
