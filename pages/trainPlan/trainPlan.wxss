@@ -1,5 +1,4 @@
 /* pages/trainPlan/trainPlan.wxss */
-
 .container {
   font-size: 24rpx;
   color: #fff;
@@ -135,4 +134,82 @@ image{
 }
 .none{
   display: none
+}
+.video_pay{
+  position: absolute;
+  /* background: red; */
+  height: 600rpx;
+  width: 600rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  opacity: .99;
+}
+.video_pay_con_tit{
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.video_pay_con{
+position:relative;
+border-radius:10rpx;
+width:560rpx;
+height:500rpx;
+background:#d6f5f2;
+margin:0 auto;
+padding-top:70px;
+box-sizing:border-box;
+
+
+}
+.closeimg{
+position:absolute;
+top:530rpx;
+left:50%;
+transform:translateX(-50%);
+border-radius:50%;
+width:60rpx;
+height:60rpx;
+
+}
+.con-txt{
+text-align:center;
+width:270rpx;
+margin:0 auto;
+color:#666;
+font-size:28rpx;
+
+}
+.buynowbtn{
+margin:0 auto;
+background:rgb(74, 172, 167);
+width:90%;
+border-radius:10rpx;
+ 
+}
+.video-img{
+position:relative;
+display:block;
+margin:20rpx auto;
+height:60rpx;
+line-height:60rpx;
+width:60rpx;
+left:0;
+top:0;
+
+}
+.openinmg{
+width:100%;
+height:110rpx;
+left:0rpx;
+top:50rpx;
+z-index:2;
+
+
+
 }

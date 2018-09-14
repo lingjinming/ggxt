@@ -2,9 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/trainPlan/trainPlan",
+    "pages/choose/choose",
     "pages/result/result",
     "pages/trainvideo/trainvideo",
-    "pages/choose/choose",
     "pages/test/test",
     "pages/complete/complete",
     "pages/measinstru/measinstru",
